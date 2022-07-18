@@ -1,0 +1,132 @@
+.descriptionBlock {
+    padding: 10px;
+    background-color: #748acb;
+    border-radius: 15px;
+    margin-left: 25px;
+    height: 280px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: #EDEDED;
+}
+
+.wrapperAvaBlock{
+    height: 414px;
+    width: 248px;
+    background-color: #748acb;
+    border-radius: 15px;
+}
+
+.wrapperImg {
+    margin-left: 24px;
+    margin-top: 35px;
+}
+
+.avaProfile {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.name {
+    font-size: 30px;
+    padding-left: 20px;
+}
+.city {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+.besday {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.street {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.languages {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.sex {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+
+.phoneNumber {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.statistic {
+    display: flex;
+    margin-left: 25px;
+    background-color: #748acb;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding-top: 21px;
+    height: 104px;
+}
+
+
+.friends {
+    margin-left: 75px;
+    font-size: 30px;
+}
+
+.subs{
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.tracks {
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.videos {
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.groups {
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.friendsItem {
+    margin-left: 25px;
+}
+
+.subsItem{
+    margin-left: 3px;
+}
+
+.tracksItem {
+    margin-left: 10px;
+}
+
+.groupsItem {
+    margin-left: 28px;
+}
+.videosItem {
+    margin-left: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

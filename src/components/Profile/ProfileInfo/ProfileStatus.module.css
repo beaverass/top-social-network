@@ -1,0 +1,10 @@
+.statusContainer {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.statusContainer:hover{
+    background: #8c9cce;
+    border-radius: 5px;
+}
+
