@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/demo-samurai/static/css/main.7a5980a1.css",
+    "main.js": "/demo-samurai/static/js/main.dad56c1d.js",
+    "static/css/731.c7ed216a.chunk.css": "/demo-samurai/static/css/731.c7ed216a.chunk.css",
+    "static/js/731.f0b78d12.chunk.js": "/demo-samurai/static/js/731.f0b78d12.chunk.js",
+    "static/css/41.e420f801.chunk.css": "/demo-samurai/static/css/41.e420f801.chunk.css",
+    "static/js/41.0df7057f.chunk.js": "/demo-samurai/static/js/41.0df7057f.chunk.js",
+    "static/media/Iphone-spinner-2.gif": "/demo-samurai/static/media/Iphone-spinner-2.d3fbaf2b81fd92c49692.gif",
+    "index.html": "/demo-samurai/index.html",
+    "main.7a5980a1.css.map": "/demo-samurai/static/css/main.7a5980a1.css.map",
+    "main.dad56c1d.js.map": "/demo-samurai/static/js/main.dad56c1d.js.map",
+    "731.c7ed216a.chunk.css.map": "/demo-samurai/static/css/731.c7ed216a.chunk.css.map",
+    "731.f0b78d12.chunk.js.map": "/demo-samurai/static/js/731.f0b78d12.chunk.js.map",
+    "41.e420f801.chunk.css.map": "/demo-samurai/static/css/41.e420f801.chunk.css.map",
+    "41.0df7057f.chunk.js.map": "/demo-samurai/static/js/41.0df7057f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a5980a1.css",
+    "static/js/main.dad56c1d.js"
+  ]
+}
