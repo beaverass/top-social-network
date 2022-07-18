@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/top-social-network/static/css/main.7a5980a1.css",
-    "main.js": "/top-social-network/static/js/main.e61b8119.js",
+    "main.js": "/top-social-network/static/js/main.84fbb877.js",
     "static/css/731.c7ed216a.chunk.css": "/top-social-network/static/css/731.c7ed216a.chunk.css",
     "static/js/731.f0b78d12.chunk.js": "/top-social-network/static/js/731.f0b78d12.chunk.js",
     "static/css/41.e420f801.chunk.css": "/top-social-network/static/css/41.e420f801.chunk.css",
@@ -9,7 +9,7 @@
     "static/media/Iphone-spinner-2.gif": "/top-social-network/static/media/Iphone-spinner-2.d3fbaf2b81fd92c49692.gif",
     "index.html": "/top-social-network/index.html",
     "main.7a5980a1.css.map": "/top-social-network/static/css/main.7a5980a1.css.map",
-    "main.e61b8119.js.map": "/top-social-network/static/js/main.e61b8119.js.map",
+    "main.84fbb877.js.map": "/top-social-network/static/js/main.84fbb877.js.map",
     "731.c7ed216a.chunk.css.map": "/top-social-network/static/css/731.c7ed216a.chunk.css.map",
     "731.f0b78d12.chunk.js.map": "/top-social-network/static/js/731.f0b78d12.chunk.js.map",
     "41.e420f801.chunk.css.map": "/top-social-network/static/css/41.e420f801.chunk.css.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.7a5980a1.css",
-    "static/js/main.e61b8119.js"
+    "static/js/main.84fbb877.js"
   ]
 }
