@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/top-social-network/static/css/main.7a5980a1.css",
-    "main.js": "/top-social-network/static/js/main.e8abb70b.js",
+    "main.css": "/top-social-network/static/css/main.9acce215.css",
+    "main.js": "/top-social-network/static/js/main.3c6564a9.js",
     "static/css/731.c7ed216a.chunk.css": "/top-social-network/static/css/731.c7ed216a.chunk.css",
     "static/js/731.f0b78d12.chunk.js": "/top-social-network/static/js/731.f0b78d12.chunk.js",
-    "static/css/41.e420f801.chunk.css": "/top-social-network/static/css/41.e420f801.chunk.css",
-    "static/js/41.0df7057f.chunk.js": "/top-social-network/static/js/41.0df7057f.chunk.js",
+    "static/css/658.fc691d57.chunk.css": "/top-social-network/static/css/658.fc691d57.chunk.css",
+    "static/js/658.92ab31ba.chunk.js": "/top-social-network/static/js/658.92ab31ba.chunk.js",
     "static/media/Iphone-spinner-2.gif": "/top-social-network/static/media/Iphone-spinner-2.d3fbaf2b81fd92c49692.gif",
     "index.html": "/top-social-network/index.html",
-    "main.7a5980a1.css.map": "/top-social-network/static/css/main.7a5980a1.css.map",
-    "main.e8abb70b.js.map": "/top-social-network/static/js/main.e8abb70b.js.map",
+    "main.9acce215.css.map": "/top-social-network/static/css/main.9acce215.css.map",
+    "main.3c6564a9.js.map": "/top-social-network/static/js/main.3c6564a9.js.map",
     "731.c7ed216a.chunk.css.map": "/top-social-network/static/css/731.c7ed216a.chunk.css.map",
     "731.f0b78d12.chunk.js.map": "/top-social-network/static/js/731.f0b78d12.chunk.js.map",
-    "41.e420f801.chunk.css.map": "/top-social-network/static/css/41.e420f801.chunk.css.map",
-    "41.0df7057f.chunk.js.map": "/top-social-network/static/js/41.0df7057f.chunk.js.map"
+    "658.fc691d57.chunk.css.map": "/top-social-network/static/css/658.fc691d57.chunk.css.map",
+    "658.92ab31ba.chunk.js.map": "/top-social-network/static/js/658.92ab31ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a5980a1.css",
-    "static/js/main.e8abb70b.js"
+    "static/css/main.9acce215.css",
+    "static/js/main.3c6564a9.js"
   ]
 }
