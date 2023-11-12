@@ -1,7 +1,7 @@
 import React, {Suspense} from "react";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Routes, Navigate} from 'react-router-dom';
 import Settings from "./components/Settings/Settings";
 import MusicContainer from "./components/Music/MusicContainer";
 import NewsContainer from "./components/News/NewsContainer";
@@ -23,16 +23,25 @@ const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileCo
 
 class App extends React.Component {
 
+    catchAllUnhandledErrors = (error) => {
+        alert("Some error");
+        // console.error(error)
+    }
+
     componentDidMount() {
         this.props.initializeApp();
+        window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+    }
 
+    componentWillUnmount() {
+        window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
 
     render() {
 
-        if (!this.props.initialized) {
-            return <Preloader/>;
-        }
+        // if (!this.props.initialized) {
+        //     return <Preloader/>;
+        // }
 
         return (
 
@@ -45,10 +54,11 @@ class App extends React.Component {
                     <Suspense fallback={<Preloader/>}>
                         <Routes>
 
+                            <Route path='/'
+                                   element={<Navigate replace to='/profile'/>}/>
 
                             <Route path='/profile/:userId'
                                    element={<ProfileContainer/>}/>
-
 
                             <Route path='/profile'
                                    element={<ProfileContainer/>}/>
@@ -73,6 +83,8 @@ class App extends React.Component {
 
                             <Route path='/friends'
                                    element={<Friends/>}/>
+
+                            <Route path='*' element={<div>404 NOT FOUND</div>}/>
                         </Routes>
                     </Suspense>
 
@@ -97,13 +109,13 @@ let AppContainer = compose(
 
 
 const SamuraiJSApp = (props) => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
 
             <AppContainer/>
 
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SamuraiJSApp;

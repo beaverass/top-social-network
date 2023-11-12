@@ -1,6 +1,6 @@
 .header {
     grid-area: h;
-    background-color: #b1bde5;
+    background-color: #282828;
     border-radius: 15px;
     height: 96px;
 }
@@ -10,6 +10,7 @@
     margin-left: 52px;
     margin-top: 20px;
     font-style: italic;
+    color: white;
 }
 
 .loginBlock {

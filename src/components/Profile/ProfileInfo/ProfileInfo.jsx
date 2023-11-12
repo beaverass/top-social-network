@@ -1,83 +1,72 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
-import profileImg from './../../../assets/images/images.png';
-import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-
-const Ava = (props) => {
-    return (
-        <div className={classes.wrapperAvaBlock}>
-            <div className={classes.wrapperImg}>
-                <img src={props.profile.photos.large ? props.profile.photos.large : profileImg} className={classes.avaProfile} />
-            </div>
-
-        </div>
-    );
-}
+import Statistic from "./Statistic";
+import Contact from "./Contact";
+import Ava from "./Ava";
+import ProfileDescriptionForm from "./ProfileDescriptionForm";
 
 const Description = (props) => {
+    let [showMore, setShowMore] = useState(false);
 
 
     return (
         <div className={classes.descriptionBlock}>
+
             <div className={classes.name}>{props.profile.fullName}</div>
 
             <ProfileStatusWithHooks updateStatus={props.updateStatus} status={props.status}/>
 
-            <div className={classes.besday}>About me: {props.profile.aboutMe}</div>
-            <div className={classes.city}>Looking for a job: {props.profile.lookingForAJob ? 'Ищу работу': 'Уже работаю'}</div>
-            <div className={classes.street}>Looking For a job description: {props.profile.lookingForAJobDescription}</div>
-            <div className={classes.languages}>languages: eng, russian</div>
-            <div className={classes.sex}>contacts: </div>
-            <div className={classes.phoneNumber}>+7-920-589-89-61</div>
+            <div className={classes.besday}><b>About me:</b> {props.profile.aboutMe}</div>
+
+            <div className={classes.descriptionItem}><b>Looking for a
+                job:</b> {props.profile.lookingForAJob ? 'Ищу работу' : 'Уже работаю'}</div>
+
+            <div className={classes.descriptionItem}><b>My professional
+                skills:</b> {props.profile.lookingForAJobDescription}</div>
+
+            {showMore ?
+                <div >
+                    <button className={classes.showMoreBtn} onClick={() => setShowMore(false)}>Hide all info</button>
+                    <div className={classes.descriptionItem}>
+                        <div><b>Contacts:</b></div>
+                        {Object.keys(props.profile.contacts).map(key => {
+                            return <Contact contactTitle={key} contactValue={props.profile.contacts[key]}/>
+                        })}
+                    </div>
+                </div>
+            : <button className={classes.showMoreBtn} onClick={() => setShowMore(true)}>Show all info</button>}
+
+
         </div>
     )
 }
 
-const Statistic = () => {
-    return (<div className={classes.statistic}>
-        <div className={classes.friends}>
-            <div className={classes.friendsItem}>61</div>
-            <div>friends</div>
-        </div>
-
-        <div className={classes.subs}>
-            <div className={classes.subsItem}>153</div>
-            <div >subs</div>
-        </div>
-
-        <div className={classes.tracks}>
-            <div className={classes.tracksItem}>233</div>
-            <div>tracks</div>
-        </div>
-
-        <div className={classes.videos}>
-            <div className={classes.videosItem}>20</div>
-            <div >videos</div>
-        </div>
-
-        <div className={classes.groups}>
-            <div className={classes.groupsItem}>45</div>
-            <div>groups</div>
-        </div>
-
-    </div>);
-}
 
 const ProfileInfo = (props) => {
+    let [editMode, setEditMode] = useState(false);
 
-    if (!props.profile){
+    if (!props.profile) {
         return <Preloader/>
     }
+    const onSubmit = async (data) => {
+        await props.saveProfile(data);
+
+        setEditMode(false);
+
+    }
+
 
     return (
         <div className={classes.wrapper}>
 
-           <Ava profile={props.profile}/>
+            <Ava savePhoto={props.savePhoto} profile={props.profile} isOwner={props.isOwner} setEditMode={setEditMode}/>
 
             <div>
-                <Description profile={props.profile} updateStatus={props.updateStatus} status={props.status}/>
+                {editMode
+                    ? <ProfileDescriptionForm errorMessages={props.errorMessages} profile={props.profile} onSubmit={onSubmit}/>
+                    : <Description profile={props.profile} updateStatus={props.updateStatus} status={props.status}/>}
                 <Statistic/>
             </div>
 
@@ -86,3 +75,5 @@ const ProfileInfo = (props) => {
 };
 
 export default ProfileInfo;
+
+

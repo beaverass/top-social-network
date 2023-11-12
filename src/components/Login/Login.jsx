@@ -25,7 +25,7 @@ const LoginForm = (props) => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1 style={{color: "white"}}>Login</h1>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -65,8 +65,19 @@ const LoginForm = (props) => {
                         {props.loginErrorMessage && <p>{props.loginErrorMessage}</p> }
                     </div>
 
+                    {props.captchaUrl &&
+                        <div>
+                            <img src={props.captchaUrl}/>
+                            <input {...register('captcha', {
+                                required: "Поле обязательно к заполнению"
+                            })}
+                                   placeholder={"captcha"}/>
+                        </div>
+                    }
+
                     <div>
-                        <input type="submit"/>
+                        <input type="submit" className={"submitButtonEnd"}/>
+
                     </div>
                 </form>
             </div>
@@ -76,7 +87,7 @@ const LoginForm = (props) => {
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe);
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     }
 
     if (props.isAuth) {
@@ -84,14 +95,15 @@ const Login = (props) => {
     }
     return (
         <div>
-            <LoginForm loginErrorMessage={props.loginErrorMessage} onSubmit={onSubmit}/>
+            <LoginForm captchaUrl={props.captchaUrl} loginErrorMessage={props.loginErrorMessage} onSubmit={onSubmit}/>
         </div>
     );
 }
 
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,
-    loginErrorMessage: state.auth.loginErrorMessage
+    loginErrorMessage: state.auth.loginErrorMessage,
+    captchaUrl: state.auth.captchaUrl
 })
 
 

@@ -1,20 +1,39 @@
+.showMoreBtn{
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #282828;
+}
+.showMoreBtn:hover {
+    background: #d2455f;
+}
+.contact {
+    padding-left: 80px;
+}
+
 .descriptionBlock {
     padding: 10px;
-    background-color: #748acb;
+    background-color: #282828;
     border-radius: 15px;
     margin-left: 25px;
-    height: 280px;
+    color: white;
 }
 .wrapper{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    background-color: #EDEDED;
+    background-color: #1a1a1a;
 }
 
 .wrapperAvaBlock{
+    color: white;
     height: 414px;
     width: 248px;
-    background-color: #748acb;
+    background-color: #282828;
     border-radius: 15px;
 }
 
@@ -33,42 +52,24 @@
     font-size: 30px;
     padding-left: 20px;
 }
-.city {
+.descriptionItem {
     padding-left: 20px;
     margin-top: 8px;
+
 }
 .besday {
     margin-top: 20px;
     padding-left: 20px;
-}
 
-.street {
-    padding-left: 20px;
-    margin-top: 8px;
-}
-
-.languages {
-    padding-left: 20px;
-    margin-top: 8px;
-}
-
-.sex {
-    padding-left: 20px;
-    margin-top: 8px;
-}
-
-
-.phoneNumber {
-    padding-left: 20px;
-    margin-top: 8px;
 }
 
 .statistic {
+    color: white;
     display: flex;
     margin-left: 25px;
-    background-color: #748acb;
+    background-color: #282828;
     border-radius: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-top: 21px;
     height: 104px;
 }
